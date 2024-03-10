@@ -1,0 +1,304 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Fredoka One';
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(238,229,173,0.9934174353335085) 0%, rgba(255,173,0,1) 100%);
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+    font-family: 'Fredoka One';
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 0 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    flex: 1;
+    text-align: right;
+    margin-right: -200px;
+    text-decoration: none;
+    max-width: 100%;
+    font-size: 80px;
+    color: rgb(255, 176, 57);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-left: 60px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: rgb(255, 176, 57);
+    font-weight: 900;
+    font-size: larger;
+    transition: transform 0.3s ease;
+}
+
+.navbar-item:hover {
+    transform: scale(1.2);
+}
+
+.navbar-icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 70px;
+}
+
+.navbar-icon {
+    text-decoration: none;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin-left: 50px;
+    color: #000000;
+    font-size: larger;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icon:hover {
+    transform: scale(1.5);
+}
+
+.mobile_acceuil {
+    display: none;
+}
+
+.acceuil-image {
+    margin-top: -150px;;
+}
+
+.title-articles {
+    margin-left: 50px;
+    margin-top: 80px;
+    margin-bottom: -100px;
+    color: rgb(151, 95, 4);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 0;
+    margin-top: 130px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(238,229,173,0.9934174353335085) 0%, rgba(255,173,0,1) 100%);
+}
+
+.card {
+    width: calc(33.33% - 30px);
+    margin: 0 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: visible;
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+    margin-left: 10px;
+    border-radius: 20px 20px 0px 0px;
+    display: block;
+    scale: 0.8;
+}
+
+.card-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 0 0 20px 20px;;
+}
+
+.card-info h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.card-info .price {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+
+footer {
+    padding: 50px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(238,229,173,0.9934174353335085) 0%, rgba(255,173,0,1) 100%);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: 300px;
+    padding: 0 20px;
+    scale: 1.3;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 25px;
+    text-align: left;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-decoration: none;
+      margin-top: -3px;
+      font-weight: 900;
+      margin-left: -110px;
+      scale: 0.3;
+    }
+
+    .acceuil-image {
+        display: none;
+    }
+
+    .navbar {
+        height: 70px;
+        margin-top: -2px;
+        margin-bottom: -150px;
+    }
+
+    .navbar-item {
+        display: none;
+    }
+
+    .navbar-icons {
+        margin-right: 10px;
+    }
+
+    .navbar-icon {
+        font-size: medium;
+        margin-left: 30px;
+    }
+
+    .navbar-menu {
+      display: none;
+    }
+
+    .navbar-text {
+      font-size: 16px;
+      color: white;
+    }
+
+    .mobile_acceuil {
+        display: flex;
+        scale: 0.7;
+        margin-bottom: 200px;
+        margin-left: -70px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 130px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px auto;
+        opacity: 1;
+        visibility: visible;
+        overflow-x: hidden;
+    }
+
+    .card img {
+        width: 80%;
+        height: 250px;
+        border-radius: 20px;
+        margin-left: 30px;
+        margin-top: 30px;
+        display: block;
+        scale: 1.2;
+    }
+
+    .title-articles {
+        margin-top: -200px;
+    }
+
+    .footer-container {
+        margin-left: -30px;
+        scale : 0.8;
+        gap: 30px;
+    }
+  }

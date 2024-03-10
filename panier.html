@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clockflow - Panier</title>
+        <link rel="stylesheet" href="/src/components/acceuil.css">
+        <link rel="stylesheet" href="/src/components/cart.css">
+        <script src="https://kit.fontawesome.com/98266dc4fa.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <!-- ajout du tableau d'articles avec leurs infos -->
+        <main class="cart-container">
+            <div class="cart-header">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
+            </div>
+            <div id="cart-items">
+            </div>
+            <!-- conteneur pour le résumé de la commande et le form -->
+            <div class="cart-summary">
+                <div class="checkout-form-wrapper">
+                    <form id="checkout-form">
+                        <h2>Checkout</h2>
+                        <input type="text" id="first-name" placeholder="First Name" required>
+                        <input type="text" id="last-name" placeholder="Last Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="address" placeholder="Address" required>
+                        <input type="text" id="city" placeholder="City" required>
+                        <input type="text" id="zip" placeholder="Zip Code" required>
+                    </form>
+                    <button type="submit" id="finalize-order">Finalize Order</button>
+                </div>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <p>Total: <span id="total-amount">$0.00</span></p>
+                    <img src="../src/assets/payment_method.png" alt="Payment Methods" id="payment-methods">
+                </div>
+            </div>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="/src/components/header_footer.js"></script>
+        <script src="/src/components/cart.js"></script>
+    </body>
+</html>
